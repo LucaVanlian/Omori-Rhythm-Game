@@ -3,20 +3,7 @@
 
     <!-- Custom PreHead code is injected here -->
     
-    <script>
-        // Force audio to resume on the first touch or click anywhere on the page
-        window.addEventListener('click', function() {
-            if (typeof g_WebAudioContext !== 'undefined' && g_WebAudioContext.state === 'suspended') {
-                g_WebAudioContext.resume();
-            }
-        }, { once: true });
-    
-        window.addEventListener('touchstart', function() {
-            if (typeof g_WebAudioContext !== 'undefined' && g_WebAudioContext.state === 'suspended') {
-                g_WebAudioContext.resume();
-            }
-        }, { once: true });
-    </script>
+
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -115,7 +102,7 @@
             
 
             <!-- Create the canvas element the game draws to -->
-            <canvas id="canvas" width="1280" height="720" >
+            <canvas id="canvas" width="1280" height="720" style="position: absolute; top: 50%; left: 50%; bottom: -50%; right: -50%; transform: translate(-50%, -50%);">
                 
                 <p>Your browser doesn't support HTML5 canvas.</p>
             </canvas>
@@ -125,7 +112,7 @@
         </div>
 
         <!-- Run the game code -->
-        <script type="text/javascript" src="html5game/Omori rythm game.js?cachebust=447243878"></script>
+        <script type="text/javascript" src="html5game/Omori rythm game.js?cachebust=1502645427"></script>
 
         <!-- Builtin injector for injecting runner path -->
         
